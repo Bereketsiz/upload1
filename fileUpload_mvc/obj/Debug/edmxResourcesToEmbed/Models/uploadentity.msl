@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ResimDataModelStoreContainer" CdmEntityContainer="ResimDataEntities">
+    <EntitySetMapping Name="ResimYukle">
+      <EntityTypeMapping TypeName="ResimDataModel.ResimYukle">
+        <MappingFragment StoreEntitySet="ResimYukle">
+          <ScalarProperty Name="resimId" ColumnName="resimId" />
+          <ScalarProperty Name="resimAdi" ColumnName="resimAdi" />
+          <ScalarProperty Name="resimUzanti" ColumnName="resimUzanti" />
+          <ScalarProperty Name="resimTuru" ColumnName="resimTuru" />
+          <ScalarProperty Name="resimBoyutu" ColumnName="resimBoyutu" />
+          <ScalarProperty Name="resimAciklama" ColumnName="resimAciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

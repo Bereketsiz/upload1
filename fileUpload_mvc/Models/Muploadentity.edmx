@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="dataModelStoreContainer">
+          <EntitySet Name="uploadfile" EntityType="dataModel.Store.uploadfile" store:Type="Tables" store:Schema="dbo" store:Name="uploadfile">
+            <DefiningQuery>SELECT 
+      [uploadfile].[dosyaId] AS [dosyaId], 
+      [uploadfile].[dosyaAdi] AS [dosyaAdi], 
+      [uploadfile].[dosyaUzanti] AS [dosyaUzanti], 
+      [uploadfile].[dosyaBoyutu] AS [dosyaBoyutu], 
+      [uploadfile].[dosyaTur] AS [dosyaTur], 
+      [uploadfile].[aciklama] AS [aciklama]
+      FROM [dbo].[uploadfile] AS [uploadfile]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'data.dbo.uploadfile' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="uploadfile">
+          <Key>
+            <PropertyRef Name="dosyaId" />
+          </Key>
+          <Property Name="dosyaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="dosyaAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="dosyaUzanti" Type="nvarchar" MaxLength="50" />
+          <Property Name="dosyaBoyutu" Type="nvarchar" MaxLength="50" />
+          <Property Name="dosyaTur" Type="nvarchar" MaxLength="50" />
+          <Property Name="aciklama" Type="nvarchar(max)" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="dataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="uploadfile" EntityType="dataModel.uploadfile" />
+        </EntityContainer>
+        <EntityType Name="uploadfile">
+          <Key>
+            <PropertyRef Name="dosyaId" />
+          </Key>
+          <Property Name="dosyaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dosyaAdi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="dosyaUzanti" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="dosyaBoyutu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="dosyaTur" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="aciklama" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dataModelStoreContainer" CdmEntityContainer="dataEntities">
+          <EntitySetMapping Name="uploadfile">
+            <EntityTypeMapping TypeName="dataModel.uploadfile">
+              <MappingFragment StoreEntitySet="uploadfile">
+                <ScalarProperty Name="dosyaId" ColumnName="dosyaId" />
+                <ScalarProperty Name="dosyaAdi" ColumnName="dosyaAdi" />
+                <ScalarProperty Name="dosyaUzanti" ColumnName="dosyaUzanti" />
+                <ScalarProperty Name="dosyaBoyutu" ColumnName="dosyaBoyutu" />
+                <ScalarProperty Name="dosyaTur" ColumnName="dosyaTur" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Muploadentity">
+        <EntityTypeShape EntityType="dataModel.uploadfile" Width="1.5" PointX="0.75" PointY="0.75" Height="2.172587890625" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

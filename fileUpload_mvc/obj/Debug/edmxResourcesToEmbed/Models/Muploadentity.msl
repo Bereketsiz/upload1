@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dataModelStoreContainer" CdmEntityContainer="dataEntities">
+    <EntitySetMapping Name="uploadfile">
+      <EntityTypeMapping TypeName="dataModel.uploadfile">
+        <MappingFragment StoreEntitySet="uploadfile">
+          <ScalarProperty Name="dosyaId" ColumnName="dosyaId" />
+          <ScalarProperty Name="dosyaAdi" ColumnName="dosyaAdi" />
+          <ScalarProperty Name="dosyaUzanti" ColumnName="dosyaUzanti" />
+          <ScalarProperty Name="dosyaBoyutu" ColumnName="dosyaBoyutu" />
+          <ScalarProperty Name="dosyaTur" ColumnName="dosyaTur" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

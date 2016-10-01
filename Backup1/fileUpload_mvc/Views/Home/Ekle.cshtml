@@ -1,0 +1,14 @@
+﻿@model IEnumerable<fileUpload_mvc.Models.ResimYukle>
+@{
+    ViewBag.Title = "Resim Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Resim Ekle</h2>
+<form action="" method="post" enctype="multipart/form-data">
+  
+  <label for="file">Resim Seç :</label>
+  <input type="file" name="resimDosyasi" id="resimDosyasi" />
+
+  <input type="submit" value="Resmi Yükle" />
+</form>

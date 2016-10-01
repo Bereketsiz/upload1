@@ -1,0 +1,41 @@
+﻿@model fileUpload_mvc.Models.ResimYukle
+
+@{
+    ViewBag.Title = "Resim Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Resim Detay</h2>
+
+<fieldset>
+    <legend>Resim Detay</legend>
+
+    <div class="display-label">Resim Adı</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.resimAdi)
+    </div>
+
+    <div class="display-label">Resim Uzantısı</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.resimUzanti)
+    </div>
+
+    <div class="display-label">Resim Türü</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.resimTuru)
+    </div>
+
+    <div class="display-label">Resim Boyutu</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.resimBoyutu)
+    </div>
+
+    <div class="display-label">Resim Açıklama</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.resimAciklama)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.resimId }) |
+    @Html.ActionLink("Ana Sayfa", "Index")
+</p>

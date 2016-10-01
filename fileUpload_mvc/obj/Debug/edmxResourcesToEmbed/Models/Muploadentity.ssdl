@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="dataModelStoreContainer">
+    <EntitySet Name="uploadfile" EntityType="dataModel.Store.uploadfile" store:Type="Tables" store:Schema="dbo" store:Name="uploadfile">
+      <DefiningQuery>SELECT 
+      [uploadfile].[dosyaId] AS [dosyaId], 
+      [uploadfile].[dosyaAdi] AS [dosyaAdi], 
+      [uploadfile].[dosyaUzanti] AS [dosyaUzanti], 
+      [uploadfile].[dosyaBoyutu] AS [dosyaBoyutu], 
+      [uploadfile].[dosyaTur] AS [dosyaTur], 
+      [uploadfile].[aciklama] AS [aciklama]
+      FROM [dbo].[uploadfile] AS [uploadfile]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'data.dbo.uploadfile' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="uploadfile">
+    <Key>
+      <PropertyRef Name="dosyaId" />
+    </Key>
+    <Property Name="dosyaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="dosyaAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="dosyaUzanti" Type="nvarchar" MaxLength="50" />
+    <Property Name="dosyaBoyutu" Type="nvarchar" MaxLength="50" />
+    <Property Name="dosyaTur" Type="nvarchar" MaxLength="50" />
+    <Property Name="aciklama" Type="nvarchar(max)" />
+  </EntityType>
+</Schema>

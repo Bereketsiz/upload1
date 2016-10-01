@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ResimDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ResimDataModelStoreContainer">
+          <EntitySet Name="ResimYukle" EntityType="ResimDataModel.Store.ResimYukle" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ResimYukle">
+          <Key>
+            <PropertyRef Name="resimId" />
+          </Key>
+          <Property Name="resimId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="resimAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="resimUzanti" Type="nvarchar" MaxLength="50" />
+          <Property Name="resimTuru" Type="nvarchar" MaxLength="50" />
+          <Property Name="resimBoyutu" Type="nvarchar" MaxLength="50" />
+          <Property Name="resimAciklama" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ResimDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ResimDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ResimYukle" EntityType="ResimDataModel.ResimYukle" />
+        </EntityContainer>
+        <EntityType Name="ResimYukle">
+          <Key>
+            <PropertyRef Name="resimId" />
+          </Key>
+          <Property Name="resimId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="resimAdi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="resimUzanti" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="resimTuru" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="resimBoyutu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="resimAciklama" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ResimDataModelStoreContainer" CdmEntityContainer="ResimDataEntities">
+          <EntitySetMapping Name="ResimYukle">
+            <EntityTypeMapping TypeName="ResimDataModel.ResimYukle">
+              <MappingFragment StoreEntitySet="ResimYukle">
+                <ScalarProperty Name="resimId" ColumnName="resimId" />
+                <ScalarProperty Name="resimAdi" ColumnName="resimAdi" />
+                <ScalarProperty Name="resimUzanti" ColumnName="resimUzanti" />
+                <ScalarProperty Name="resimTuru" ColumnName="resimTuru" />
+                <ScalarProperty Name="resimBoyutu" ColumnName="resimBoyutu" />
+                <ScalarProperty Name="resimAciklama" ColumnName="resimAciklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="uploadentity">
+        <EntityTypeShape EntityType="ResimDataModel.ResimYukle" Width="1.5" PointX="0.75" PointY="0.75" Height="2.172587890625" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

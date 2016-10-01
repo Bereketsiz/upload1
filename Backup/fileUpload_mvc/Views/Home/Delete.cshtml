@@ -1,0 +1,44 @@
+﻿@model fileUpload_mvc.Models.uploadfile
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>uploadfile</legend>
+
+    <div class="display-label">dosyaAdi</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dosyaAdi)
+    </div>
+
+    <div class="display-label">dosyaUzanti</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dosyaUzanti)
+    </div>
+
+    <div class="display-label">dosyaTur</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dosyaTur)
+    </div>
+
+    <div class="display-label">dosyaBoyutu</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dosyaBoyutu)
+    </div>
+
+    <div class="display-label">aciklama</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.aciklama)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

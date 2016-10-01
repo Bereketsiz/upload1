@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="dataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="uploadfile" EntityType="dataModel.uploadfile" />
+  </EntityContainer>
+  <EntityType Name="uploadfile">
+    <Key>
+      <PropertyRef Name="dosyaId" />
+    </Key>
+    <Property Name="dosyaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dosyaAdi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="dosyaUzanti" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="dosyaBoyutu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="dosyaTur" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

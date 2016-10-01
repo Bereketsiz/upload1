@@ -1,0 +1,59 @@
+﻿@model IEnumerable<fileUpload_mvc.Models.ResimYukle>
+
+@{
+    ViewBag.Title = "Ana Sayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ana Sayfa</h2>
+
+<p>
+    @Html.ActionLink("Resim Ekle", "Ekle")
+</p>
+<table>
+    <tr>
+        <th>
+            Resim Adı
+        </th>
+        <th>
+            Resim Uzantısı
+        </th>
+        <th>
+            Resim Türü
+        </th>
+        <th>
+            Resim Boyutu
+        </th>
+        <th>
+            Resim Açıklama
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.resimAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resimUzanti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resimTuru)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resimBoyutu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resimAciklama)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.resimId }) |
+            @Html.ActionLink("Detay", "Detay", new { id = item.resimId }) |
+            @Html.ActionLink("Sil", "Delete", new { id = item.resimId }) |
+            @Html.ActionLink("Resim Ekle", "Ekle", new {id = UrlParameter.Optional})
+        </td>
+    </tr>
+}
+
+</table>

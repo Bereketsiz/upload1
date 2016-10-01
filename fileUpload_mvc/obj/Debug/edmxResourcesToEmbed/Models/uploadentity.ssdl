@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ResimDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ResimDataModelStoreContainer">
+    <EntitySet Name="ResimYukle" EntityType="ResimDataModel.Store.ResimYukle" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ResimYukle">
+    <Key>
+      <PropertyRef Name="resimId" />
+    </Key>
+    <Property Name="resimId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="resimAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="resimUzanti" Type="nvarchar" MaxLength="50" />
+    <Property Name="resimTuru" Type="nvarchar" MaxLength="50" />
+    <Property Name="resimBoyutu" Type="nvarchar" MaxLength="50" />
+    <Property Name="resimAciklama" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>
